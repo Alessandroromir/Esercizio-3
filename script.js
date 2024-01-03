@@ -1,13 +1,12 @@
 //dichiarare le variabili
-let addp = document.createElement("p")
-let text = document.createTextNode("ciao")
- 
+
+
+let container= document.getElementById("container")
 
 //dichiarare le funzioni
 
 
 
 //eseguire le funzioni
-addp.appendChild(text)
 
-document.body.appendChild(addp)
+container.remove()
