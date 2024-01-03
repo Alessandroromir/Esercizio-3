@@ -1,16 +1,31 @@
-//dichiarare le variabili
+// Dichiaro le variabili
 
+let btn = document.getElementById('btn');
 
-let container= document.getElementById("container");
+let paragraph = document.createElement('p');
 
-//dichiarare le funzioni
+let text = document.createTextNode('Hello World!');
 
-function changeColor() {
-    container.style.backgroundColor = "red";
+function onClick() {
 
+    // Verifico se il paragrafo è già presente
+
+    if (btn.contains(paragraph)) {
+
+        // Se presente, lo rimuovo
+
+        btn.removeChild(paragraph);
+
+    } else {
+
+        // Altrimenti, lo aggiungo
+
+        paragraph.appendChild(text);
+
+        btn.appendChild(paragraph);
+    }
 }
 
+// Eseguo l'evento click
 
-//eseguire le funzioni
-
-container.addEventListener("mouseover", changeColor);
+btn.addEventListener('click', onClick);
