@@ -1,12 +1,16 @@
 //dichiarare le variabili
 
 
-let container= document.getElementById("container")
+let container= document.getElementById("container");
 
 //dichiarare le funzioni
 
+function changeColor() {
+    container.style.backgroundColor = "red";
+
+}
 
 
 //eseguire le funzioni
 
-container.remove()
+container.addEventListener("mouseover", changeColor);
