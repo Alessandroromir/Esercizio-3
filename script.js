@@ -1,17 +1,11 @@
-//dichiarare le variabili
+document.addEventListener('DOMContentLoaded', () => {
 
-let text = document.getElementById("text");
+let image = document.getElementById('image');
 
-
-//dichiarare le funzioni
-
-function changeText() {
-    text.innerHTML = "Hello";
- 
+function changeImage() {
+    image.style.height = "100px";
+    image.style.width = "100px";
 }
 
 
-
-//eseguire le funzioni
-
-changeText();
+image.addEventListener('click', changeImage);})
