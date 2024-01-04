@@ -1,11 +1,10 @@
-let text = document.getElementById("text");
+let btn = document.getElementById('btn');
 
-
-function colorChange() {
-    text.style.color = "blue";
-
-
+function warning() {
+    alert('Ciao');
+    
+ 
 
 }
 
-text.addEventListener("click", colorChange);
+btn.addEventListener('click', warning);
