@@ -1,10 +1,19 @@
-let btn = document.getElementsByClassName('btn')[0];
 
+//Con querySelectorAll posso trattare tutti gli elementi li come Array
 
-function change () {
+let elements = document.querySelectorAll('li');
 
-    btn.style.color = 'aqua';
-    btn.style.backgroundColor = 'black';
+// Funzione da dichiarare che ha un parametro. Verrà  utilizzato nel forEach
+function enhancedElements(element) {
+    element.style.height = "100px";
+    element.style.width = "100px";
+    element.style.color = "red";
 }
+// Con forEach creiamo una funzione anonima che si porta dietro però il parametro della funzione precedente
+elements.forEach(function (element) {
 
-btn.addEventListener('click', change);
+    element.addEventListener('mouseover', function () {
+        // La funzione che l'evento deve eseguire è quella anonima, che avrà al suo interno quella precedente
+        enhancedElements(element);
+    });
+});
