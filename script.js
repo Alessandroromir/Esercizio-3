@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+let text = document.getElementById("text");
 
-let image = document.getElementById('image');
 
-function changeImage() {
-    image.style.height = "100px";
-    image.style.width = "100px";
+function colorChange() {
+    text.style.color = "blue";
+
+
+
 }
 
-
-image.addEventListener('click', changeImage);})
+text.addEventListener("click", colorChange);
