@@ -1,31 +1,17 @@
-// Dichiaro le variabili
+//dichiarare le variabili
 
-let btn = document.getElementById('btn');
+let text = document.getElementById("text");
 
-let paragraph = document.createElement('p');
 
-let text = document.createTextNode('Hello World!');
+//dichiarare le funzioni
 
-function onClick() {
-
-    // Verifico se il paragrafo è già presente
-
-    if (btn.contains(paragraph)) {
-
-        // Se presente, lo rimuovo
-
-        btn.removeChild(paragraph);
-
-    } else {
-
-        // Altrimenti, lo aggiungo
-
-        paragraph.appendChild(text);
-
-        btn.appendChild(paragraph);
-    }
+function changeText() {
+    text.innerHTML = "Hello";
+ 
 }
 
-// Eseguo l'evento click
 
-btn.addEventListener('click', onClick);
+
+//eseguire le funzioni
+
+changeText();
