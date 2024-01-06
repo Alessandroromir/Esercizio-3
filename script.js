@@ -1,18 +1,15 @@
 //dichiara le variabili
-let text = document.getElementById('text')
+
 let btn = document.getElementById('btn')
-let list = document.getElementById('list')
+let counter = document.getElementById('counter')
 
 
 //definisci le funzioni
 
-function addText() {
-    let newLi = document.createElement('li');
-    let content = text.value
-    newLi.appendChild(document.createTextNode(content));
-    list.appendChild(newLi);
-    text.value = "";
-
+function onclick() {
+    let content = counter.innerHTML
+    let increase = parseInt(content) + 1;
+    counter.innerHTML = increase
 
 }
 
@@ -20,4 +17,4 @@ function addText() {
 
 //esegui le funzioni
 
-btn.addEventListener('click', addText)
+btn.addEventListener('click', onclick)
