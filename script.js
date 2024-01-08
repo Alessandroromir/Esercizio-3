@@ -1,13 +1,16 @@
-//dichiarare le variabili
-let addp = document.createElement("p")
-let text = document.createTextNode("ciao")
- 
-
-//dichiarare le funzioni
+//dichiara le variabili
+let box = document.getElementById('box');
 
 
 
-//eseguire le funzioni
-addp.appendChild(text)
+//definisci le funzioni
+function changeColor() {
+    box.style.backgroundColor = "blue";
 
-document.body.appendChild(addp)
+
+}
+
+
+//esegui le funzioni
+
+box.addEventListener('mouseout', changeColor);
